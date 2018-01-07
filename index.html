@@ -6,25 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Victorias</title>
     <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/mobi.3.1.1.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <div id="app">
-        <header class="top"></header>
-        <nav>
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
-        </nav>
-        <router-view></router-view>
+        <header class="container-wider">
+            <section class="top"></section>
+            <section class="nav container-wider">
+                <img class="logo" src="./img/logo.png" alt="logo" />
+                <div>
+                    <router-link to="/chen">维密秀</router-link>
+                    <router-link to="/underwear">内衣</router-link>
+                    <router-link to="/meizhuang">美妆</router-link>
+                    <router-link to="/sport">运动</router-link>
+                    <router-link to="/pink">维密PINK</router-link>
+                    <router-link to="/dingYue">订阅</router-link>
+                    <router-link to="/map">门店位置</router-link>
+                </div>
+            </section>
+        </header>
+        <section :class="ifIndex?'iframeCont container-wider':'iframeCont'">
+            <router-view></router-view>
+        </section>
+        <footer>
+            <ul class="flex-left contact container-wider">
+                <li class="unit">
+                    <span>订阅Victoria’s Secret电子资讯</span>
+                    <fieldset class="input">
+                        <input type="text" placeholder="邮箱">
+                        <router-link class="goEmail" to="/foo"><i class="fa fa-send" aria-hidden="true"></i></router-link>
+                    </fieldset>
+                    <span>获取更多优惠</span>
+                </li>
+                <li class="unit hover">
+                    <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                    <span class="map">查找门店</span>
+                </li>
+                <li class="unit hover tmall">
+                    <span>Victoria’s Secret</span>
+                    <div></div>
+                    <span>天猫官方旗舰店</span>
+                </li>
+                <li class="unit">
+                    <span>关注Victoria’s Secret</span>
+                    <div class="wechat">
+                        <i class="fa fa-weibo fa-2x" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-weixin fa-2x" aria-hidden="true"></i>
+                    </div>
+                </li>
+            </ul>
+            <div class="container-wider tel">
+                <span>热线电话：4008 823823</span>
+                <a href="https://www.victoriassecretcn.com/aboutus.php">关于我们</a>
+            </div>
+            <div class="copy">
+                <small>Copyright© 2017 基因重组 版权所有</small>
+                <small>仿照维密，仅用于学习</small>
+            </div>
+        </footer>
     </div>
-    <script type="text/x-template" id="head">
-        <frameset>
-            <frame src="./test1.html"/>
-        </frameset>
-    </script>
-    <script src="./js/babel.js"></script>
     <script src="./js/jquery.3.2.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/vue2.js"></script>

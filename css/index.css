@@ -1,4 +1,132 @@
+a:hover{
+    text-decoration: none;
+    color: #000；
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.container-wider{
+    margin: 0 auto;
+}
 .top{
-    height: 6rem;
+    height: 4.4rem;
+    width: 100%;
     background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo{
+    display: block;
+    margin: 34px auto;
+}
+.nav{
+    margin-top: 4.4rem;
+}
+.nav>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav a{
+    font-size: .75rem;
+    letter-spacing: 1px;
+    color: #000;
+}
+.nav a:hover{
+    color: #ff3399;
+}
+.iframeCont{
+    transition: all 0.5s ease-out;
+    padding: 0;
+}
+
+footer{
+    font-size: .875rem;
+    letter-spacing: 2px;
+    background-color: #000;
+    color: #fff;
+}
+footer a{
+    color: #fff;
+}
+.input{
+    height: 35px;
+    width: 70%;
+    margin: 10px 0;
+    padding: 7px 8px;
+    border: 0;
+    background-color: #fff;
+}
+.input>input{
+    border: 0;
+    height: 100%;
+    display: block;
+    float: left;
+    color: #ff3399;
+}
+.input>input:focus{
+    outline: none;
+}
+.goEmail{
+    color: #000;
+    z-index: 100;
+    float: right;
+    line-height: 21px;
+    z-index: 10;
+}
+.contact{
+    padding: 4rem 0;
+}
+.contact>li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.map{
+    padding: 6px;
+}
+.hover{
+    cursor: pointer;
+}
+.hover:hover{
+    color: #ff3399;
+}
+.tmall>div{
+    min-height: 30px;
+    min-width: 141px;
+    background-image: url('../img/tmall.png');
+    background-repeat: no-repeat;
+    background-position: center 0%;
+}
+.tmall:hover>div{
+    background-position: center 100%;
+}
+.wechat{
+    margin-top: 16px;
+}
+.tel{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+}
+.copy{
+    padding: 25px 0;
+    background-color: #fff;
+    color: #000;
+}
+.copy>small{
+    display: block;
+    text-align: center;
+    cursor: default;
 }
