@@ -1,5 +1,6 @@
 const chen = { template: '<iframe src="./component/chen.html"></iframe>' }
 const dingYue = { template: '<iframe src="./component/underwear.html"></iframe>' }
+const dingYue = { template: '<iframe src="./component/dingYue.html"></iframe>' }
 const underwear = { template: '<iframe src="./component/underwear.html"></iframe>' }
 const meizhuang = { template: '<iframe src="./component/meizhuang.html"></iframe>' }
 const sport = { template: '<iframe src="./component/sport.html"></iframe>' }
@@ -38,6 +39,7 @@ const app = new Vue({
 window.addEventListener('message',function(e){
   let iframeCont = document.getElementsByClassName('iframeCont')[0];
   iframeCont.style.height=e.data+'px';
+  iframeCont.style.height=(e.data+1)+'px';
 },false);
 
 window.frames[0].postMessage('getcolor','*');
