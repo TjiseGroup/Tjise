@@ -17,7 +17,6 @@
             <section class="nav container-wider">
                 <img class="logo" src="./img/logo.png" alt="logo" />
                 <div>
-                    <button @click="go()">test</button>
                     <router-link to="/chen" @click.native="go()" :class="$route.path === '/chen'?'pink':''">维密秀</router-link>
                     <router-link to="/underwear" @click.native="go()" :class="$route.path === '/underwear'?'pink':''">内衣</router-link>
                     <router-link to="/meizhuang" @click.native="go()" :class="$route.path === '/meizhuang'?'pink':''">美妆</router-link>
