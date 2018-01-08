@@ -16,6 +16,7 @@ iframe{
 }
 .container-wider{
     margin: 0 auto;
+    padding: 0;
 }
 .top{
     height: 4.4rem;
@@ -31,6 +32,7 @@ iframe{
 }
 .nav{
     margin-top: 4.4rem;
+    padding-bottom: 34px;
 }
 .nav>div{
     width: 100%;
@@ -84,14 +86,20 @@ footer a{
     line-height: 21px;
     z-index: 10;
 }
-.contact{
-    padding: 4rem 0;
+.goEmail:hover{
+    color: #f39;
 }
+.contact{
+    overflow: visible;
+    padding: 2rem 0 1rem 0;
+}
+.goMap,
 .contact>li{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem 0;
 }
 .map{
     padding: 6px;
@@ -114,6 +122,25 @@ footer a{
 }
 .wechat{
     margin-top: 16px;
+    position: relative;
+}
+.wechat>i:nth-child(2){
+    cursor: pointer;
+}
+.wechat>img{
+    transition: all .6s ease-out;
+    top: -190px;
+    position: absolute;
+    transform: scale(3);
+    z-index: -1;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #000;
+    opacity: 0;
+}
+.wechat>i:nth-child(2):hover + img{
+    z-index: 100;
+    opacity: 1;
 }
 .tel{
     display: flex;
