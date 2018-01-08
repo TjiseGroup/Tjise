@@ -1,3 +1,31 @@
 .dy{
 	    text-align: center;
 }
+.dy p{
+	font-size: 28px;
+	font-family: "微软雅黑";
+}
+#xx{
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+#xy1{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+#xy2{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+#xy3{
+	font-size:12px;
+	font-family: "微软雅黑";
+	text-align: left;
+}
+.label{
+	text-align:center;
+	width: 105%
+}
+#ys{
+	color:#f39;
+}
