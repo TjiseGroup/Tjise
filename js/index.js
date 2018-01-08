@@ -5,6 +5,7 @@ const meizhuang = { template: '<iframe src="./component/meizhuang.html"></iframe
 const sport = { template: '<iframe src="./component/sport.html"></iframe>' }
 const pink = { template: '<iframe src="./component/pink.html"></iframe>' }
 const map = { template: '<iframe src="./component/map.html"></iframe>' }
+const mingdan = { template: '<iframe src="./component/weimimingdan.html"></iframe>' }
 
 const routes = [
   { path: '/', component: chen },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/sport', component: sport },
   { path: '/pink', component: pink },
   { path: '/map', component: map },
+  { path: '/mingdan', component: mingdan },
   { path: '/dingYue', component: dingYue }
 ]
 
@@ -26,18 +28,28 @@ const router = new VueRouter({
 const app = new Vue({
   router,
   data: {
-
+    show: false
   },
   computed: {
     ifIndex: function () {
       return (this.$route.path === '/chen' || this.$route.path === '/') ? false : true;
     }
+  },
+  methods: {
+    go: function () {
+      let that = this;
+      this.show = false;
+      setTimeout(() => {
+        that.show = true;
+      }, 900)
+    }
+  },
+  mounted() {
+    this.show = true;
   }
 }).$mount('#app')
 
-window.addEventListener('message',function(e){
+window.addEventListener('message', function (e) {
   let iframeCont = document.getElementsByClassName('iframeCont')[0];
-  iframeCont.style.height=(e.data+1)+'px';
-},false);
-
-window.frames[0].postMessage('getcolor','*');
+  iframeCont.style.height = (e.data + 1) + 'px';
+}, false);

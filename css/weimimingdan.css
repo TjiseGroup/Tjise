@@ -4,12 +4,11 @@
 }
 .bgi{
 	position: relative;
-	width: 1480px;
 	margin: 0 auto;
 	
 }
 .list{
-	height: 460px;
+	height: 400px;
 	width: 234px;
 	background-color: black;
 	position: absolute;
