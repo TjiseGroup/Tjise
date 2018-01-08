@@ -17,11 +17,6 @@ li {
 }
 
 
-/*css reset end*/
-
-
-/*css public start*/
-
 .floatfix {
 	*zoom: 1;
 }
@@ -31,12 +26,6 @@ li {
 	display: table;
 	clear: both;
 }
-
-
-/*css public end*/
-
-
-/*slider start*/
 
 .slider-contaner {
 	width: 100%;
@@ -94,25 +83,17 @@ li {
 }
 
 
-/*设置轮播焦点的位置*/
-
 .focus-container {
 	bottom: 2%;
 }
-
-
-/*设置当前图片焦点的颜色*/
 
 .focus-item {
 	background: #51B1D9;
 }
 
-
-/*设置动画，请根据实际需要修改秒数*/
-
 .slider-item,
 .focus-item {
-	animation-duration: 7s;
+	animation-duration: 12s;
 }
 
 .slider-item1,
@@ -122,18 +103,22 @@ li {
 
 .slider-item2,
 .focus-item2 {
-	animation-delay: 2s;
+	animation-delay: 3s;
 }
 
 .slider-item3,
 .focus-item3 {
-	animation-delay: 4s;
+	animation-delay: 6s;
+}
+.slider-item4,
+.focus-item4 {
+	animation-delay: 9s;
 }
 
 @keyframes fade {
 	0% {
 		opacity: 0;
-		z-index: 2;
+		z-index: 1;
 	}
 	5% {
 		opacity: 1;
@@ -144,22 +129,14 @@ li {
 		z-index: 1;
 	}
 	25% {
-		opacity: 0;
-		z-index: 0;
+		opacity: 1;
+		z-index: 1;
 	}
 	100% {
-		opacity: 0;
-		z-index: 0;
+		opacity: 1;
+		z-index: 1;
 	}
 }
-
-
-/*设置背景，响应式请利用媒体查询根据断点修改路径*/
-
-
-
-/*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
-
 .slider,
 .slider-item {
 	padding-bottom: 40%;
@@ -171,7 +148,8 @@ li {
 <ul class="slider" style="width: 300%; display: flex;">
 <li class="slider-item slider-item1"><img src="../img/45.jpg" ></li>
 <li class="slider-item slider-item2"><img src="../img/46.jpg" ></li>
-<li class="slider-item slider-item3"><img src="../img/47.jpg" ></li>
+<li class="slider-item slider-item3"><img src="../img/54.jpg" ></li>
+<li class="slider-item slider-item4"><img src="../img/52.jpg" ></li>
 </ul>
 </div>
 <div class="focus-container">
@@ -179,6 +157,7 @@ li {
 <li><div class="focus-item focus-item1"></div></li>
 <li><div class="focus-item focus-item2"></div></li>
 <li><div class="focus-item focus-item3"></div></li>
+<li><div class="focus-item focus-item4"></div></li>
 </ul>
 </div>
 
