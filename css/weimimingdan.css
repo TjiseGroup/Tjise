@@ -1,0 +1,150 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.bgi{
+	position: relative;
+	width: 1480px;
+	margin: 0 auto;
+	
+}
+.list{
+	height: 460px;
+	width: 234px;
+	background-color: black;
+	position: absolute;
+	top: 100px;
+	left: 10px;
+}
+
+.list_ul{
+	height: 420px;
+	padding:20px p ;
+	list-style-type: none;
+	background-color: black;
+	color: grey;
+}
+.list_ul li{
+	padding-left: 50px;
+	height: 45px;
+}
+.button{
+	position: absolute;
+	bottom:20px ;
+	right: 80px;
+	
+}
+.button_ul{
+	list-style-type: none;
+}
+.button_ul li{
+	float: left;
+	margin-left: 10px;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: gold;
+	border: 2px solid grey;
+}
+.content_01{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_01{
+	display: block;
+}
+.content_02{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_02{
+	display: block;
+}
+.content_03{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_03{
+	display: block;
+}
+.content_04{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_04{
+	display: block;
+}
+
+.content_05{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_05{
+	display: block;
+}
+
+.content_06{
+	height: 250px;
+	width: 150px;
+	background-color: black;
+	position: absolute;
+	top: 40px;
+	left: 134px;
+	display: none;
+	color: blanchedalmond;
+	text-align:center;
+}
+
+.list_ul li:hover .content_06{
+	display: block;
+}
+.list_ul li h4{
+	color: #ffffdf;
+}
+.content_01 a{
+	text-decoration: none;
+	color: blanchedalmond;
+}
+.he_img{
+	width: 100%;
+}
