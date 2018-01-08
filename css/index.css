@@ -51,7 +51,7 @@ iframe{
 }
 .iframeCont{
     transition: all 0.5s ease-out;
-    min-height: calc(100vh - 239px);
+    min-height: 100vh;
     padding: 0;
     margin: 25px auto;
 }
