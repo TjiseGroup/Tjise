@@ -26,18 +26,28 @@ const router = new VueRouter({
 const app = new Vue({
   router,
   data: {
-
+    show: false
   },
   computed: {
     ifIndex: function () {
       return (this.$route.path === '/chen' || this.$route.path === '/') ? false : true;
     }
+  },
+  methods: {
+    go: function () {
+      let that = this;
+      this.show = false;
+      setTimeout(() => {
+        that.show = true;
+      }, 900)
+    }
+  },
+  mounted() {
+    this.show = true;
   }
 }).$mount('#app')
 
-window.addEventListener('message',function(e){
+window.addEventListener('message', function (e) {
   let iframeCont = document.getElementsByClassName('iframeCont')[0];
-  iframeCont.style.height=(e.data+1)+'px';
-},false);
-
-window.frames[0].postMessage('getcolor','*');
+  iframeCont.style.height = (e.data + 1) + 'px';
+}, false);

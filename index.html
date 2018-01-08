@@ -17,31 +17,34 @@
             <section class="nav container-wider">
                 <img class="logo" src="./img/logo.png" alt="logo" />
                 <div>
-                    <router-link to="/chen">维密秀</router-link>
-                    <router-link to="/underwear">内衣</router-link>
-                    <router-link to="/meizhuang">美妆</router-link>
-                    <router-link to="/sport">运动</router-link>
-                    <router-link to="/pink">维密PINK</router-link>
-                    <router-link to="/dingYue">订阅</router-link>
-                    <router-link to="/map">门店位置</router-link>
+                    <button @click="go()">test</button>
+                    <router-link to="/chen" @click.native="go()" :class="$route.path === '/chen'?'pink':''">维密秀</router-link>
+                    <router-link to="/underwear" @click.native="go()" :class="$route.path === '/underwear'?'pink':''">内衣</router-link>
+                    <router-link to="/meizhuang" @click.native="go()" :class="$route.path === '/meizhuang'?'pink':''">美妆</router-link>
+                    <router-link to="/sport" @click.native="go()" :class="$route.path === '/sport'?'pink':''">运动</router-link>
+                    <router-link to="/pink" @click.native="go()" :class="$route.path === '/pink'?'pink':''">维密PINK</router-link>
+                    <router-link to="/dingYue" @click.native="go()" :class="$route.path === '/dingYue'?'pink':''">订阅</router-link>
+                    <router-link to="/map" @click.native="go()" :class="$route.path === '/map'?'pink':''">门店位置</router-link>
                 </div>
             </section>
         </header>
-        <section :class="ifIndex?'iframeCont container-wider':'iframeCont'">
-            <router-view></router-view>
-        </section>
+        <transition name="go" enter-active-class="animated fadeInRight animationDelay" leave-active-class="animated fadeOutLeft">
+            <section :class="ifIndex?'iframeCont container-wider':'iframeCont'" v-if="show">
+                <router-view></router-view>
+            </section>
+        </transition>
         <footer>
             <ul class="flex-center contact container-wider flex-wrap">
                 <li class="unit">
                     <span>订阅Victoria’s Secret电子资讯</span>
                     <fieldset class="input">
                         <input type="text" placeholder="邮箱">
-                        <router-link class="goEmail" to="/dingYue"><i class="fa fa-send" aria-hidden="true"></i></router-link>
+                        <router-link @click.native="go()" class="goEmail" to="/dingYue"><i class="fa fa-send" aria-hidden="true"></i></router-link>
                     </fieldset>
                     <span>获取更多优惠</span>
                 </li>
                 <li class="unit-1-4">
-                    <router-link to="/map" class="hover goMap">
+                    <router-link @click.native="go()" to="/map" class="hover goMap">
                         <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
                         <span class="map">查找门店</span>
                     </router-link>
