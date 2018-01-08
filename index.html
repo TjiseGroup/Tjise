@@ -31,18 +31,20 @@
             <router-view></router-view>
         </section>
         <footer>
-            <ul class="flex-left contact container-wider">
+            <ul class="flex-center contact container-wider flex-wrap">
                 <li class="unit">
                     <span>订阅Victoria’s Secret电子资讯</span>
                     <fieldset class="input">
                         <input type="text" placeholder="邮箱">
-                        <router-link class="goEmail" to="/foo"><i class="fa fa-send" aria-hidden="true"></i></router-link>
+                        <router-link class="goEmail" to="/dingYue"><i class="fa fa-send" aria-hidden="true"></i></router-link>
                     </fieldset>
                     <span>获取更多优惠</span>
                 </li>
-                <li class="unit hover">
-                    <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
-                    <span class="map">查找门店</span>
+                <li class="unit-1-4">
+                    <router-link to="/map" class="hover goMap">
+                        <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                        <span class="map">查找门店</span>
+                    </router-link>
                 </li>
                 <li class="unit hover tmall">
                     <span>Victoria’s Secret</span>
@@ -54,6 +56,7 @@
                     <div class="wechat">
                         <i class="fa fa-weibo fa-2x" aria-hidden="true"></i>&nbsp;
                         <i class="fa fa-weixin fa-2x" aria-hidden="true"></i>
+                        <img src="./img/pay.jpg" alt="二维码">
                     </div>
                 </li>
             </ul>
@@ -68,7 +71,6 @@
         </footer>
     </div>
     <script src="./js/jquery.3.2.js"></script>
-    <script src="./js/bootstrap.js"></script>
     <script src="./js/vue2.js"></script>
     <script src="./js/vue-router3.js"></script>
     <script src="./js/index.js"></script>
