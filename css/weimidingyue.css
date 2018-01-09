@@ -20,12 +20,16 @@
 #xy3{
 	font-size:12px;
 	font-family: "微软雅黑";
-	text-align: left;
+	
 }
 .label{
 	text-align:center;
-	width: 105%
+	width: 112%
 }
 #ys{
 	color:#f39;
 }
+.flex-middle{
+	white-space:nowrap;
+}
+
