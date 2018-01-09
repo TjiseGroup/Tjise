@@ -5,6 +5,7 @@ const meizhuang = { template: '<iframe src="./component/meizhuang.html"></iframe
 const sport = { template: '<iframe src="./component/sport.html"></iframe>' }
 const pink = { template: '<iframe src="./component/pink.html"></iframe>' }
 const map = { template: '<iframe src="./component/map.html"></iframe>' }
+const mingdan = { template: '<iframe src="./component/weimimingdan.html"></iframe>' }
 
 const routes = [
   { path: '/', component: chen },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/sport', component: sport },
   { path: '/pink', component: pink },
   { path: '/map', component: map },
+  { path: '/mingdan', component: mingdan },
   { path: '/dingYue', component: dingYue }
 ]
 
