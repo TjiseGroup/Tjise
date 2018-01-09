@@ -161,6 +161,7 @@
 
 .list_ul li:hover {
 	color: #ff78c7;
+	font-size:110%;
 }
 
 * {
