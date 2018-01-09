@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/mobi.3.1.1.css">
+    <link rel="stylesheet" href="../css/map.css">
+</head>
+
+<body>
+    <div class="flex-center" id="map">
+        <section class="unit-1-3 left">
+            <h1>查找门店</h1>
+            <p>查找附近门店，探索更多Victoria's Secret</p>
+            <p>所在省份</p>
+            <i class="fa fa-chevron-down fa-2x selectDown" aria-hidden="true"></i>
+            <select name="province" id="province" @change="setShowData($event)">
+                <option value="">请选择</option>
+                <option v-for="(value,key,i) in data" :value="key.toString()">{{key}}</option>
+            </select>
+            <p>所在城市</p>
+            <i class="fa fa-chevron-down fa-2x selectDown" aria-hidden="true"></i>
+            <select name="city" id="city" @change="goCity($event)">
+                <option value="">请选择</option>
+                <option v-for="i in showData" :value="i.toString()">{{i.toString()}}</option>
+            </select>
+            <!-- {{victoriaData}} -->
+            <div class="scroll-view">
+                <ul>
+                    <li class="position" v-for="(value,index) in victoriaData" @click="mapPosition(index)">
+                        <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                        <h3 class="stitle">{{value.title}}</h3>
+                        <p class="addr">{{value.address}}</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="unit-2-3">
+            <div id="baidu"></div>
+        </section>
+    </div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=X8MvlGEXHuNTYTDiodeedhFY3oOG67oH"></script> 
+    <script src="../js/vue2.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+
+</html>
