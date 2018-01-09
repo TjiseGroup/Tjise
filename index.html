@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Victorias</title>
+    <link rel="shortcut icon" href="./img/logoMain.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/mobi.3.1.1.css">
@@ -17,7 +18,6 @@
             <section class="nav container-wider">
                 <img class="logo" src="./img/logo.png" alt="logo" />
                 <div>
-                    <router-link to="/chen" @click.native="go()" :class="$route.path === '/chen'?'pink':''">维密秀</router-link>
                     <router-link to="/underwear" @click.native="go()" :class="$route.path === '/underwear'?'pink':''">内衣</router-link>
                     <router-link to="/meizhuang" @click.native="go()" :class="$route.path === '/meizhuang'?'pink':''">美妆</router-link>
                     <router-link to="/sport" @click.native="go()" :class="$route.path === '/sport'?'pink':''">运动</router-link>
@@ -25,6 +25,7 @@
                     <router-link to="/mingdan" @click.native="go()" :class="$route.path === '/mingdan'?'pink':''">维密天使</router-link>
                     <router-link to="/dingYue" @click.native="go()" :class="$route.path === '/dingYue'?'pink':''">订阅</router-link>
                     <router-link to="/map" @click.native="go()" :class="$route.path === '/map'?'pink':''">门店位置</router-link>
+                    <router-link to="/chen" @click.native="go()" :class="$route.path === '/chen'?'pink':''">维密秀</router-link>
                 </div>
             </section>
         </header>
@@ -38,7 +39,7 @@
                 <li class="unit">
                     <span>订阅Victoria’s Secret电子资讯</span>
                     <fieldset class="input">
-                        <input type="text" placeholder="邮箱">
+                        <input type="text" placeholder="邮箱" id="email">
                         <router-link @click.native="go()" class="goEmail" to="/dingYue"><i class="fa fa-send" aria-hidden="true"></i></router-link>
                     </fieldset>
                     <span>获取更多优惠</span>

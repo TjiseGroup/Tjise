@@ -42,7 +42,7 @@
 						<img src="../img/52b.png"/>
 					</div>
 					<div class="unit-2-3 col-lg-1">
-					<a href="https://victoriassecretcn.tmall.com/?spm=a1z10.3-b-s.w5001-16680827709.4.43bfb9d4bE9m2W&scene=taobao_shop">	
+					<a id="buy">	
 						<img src="../img/4a.jpg" height="400px" onMouseOver="this.src='../img/4b.jpg'" onMouseOut="this.src='../img/4a.jpg'"/></a>
 					</div>
 				</div>
@@ -62,5 +62,11 @@
 
 
 		<script src="../js/common.js"></script>
+		<script>
+				let buy = document.getElementById('buy');
+				buy.addEventListener('click', function () {
+					window.parent.postMessage({url:"https://victoriassecretcn.tmall.com/?spm=a1z10.3-b-s.w5001-16680827709.4.43bfb9d4bE9m2W&scene=taobao_shop"}, '*');
+				})
+			</script>
 	</body>
 </html>

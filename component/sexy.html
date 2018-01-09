@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>sexy</title>
-		<link rel="stylesheet" href="../css/mobi.3.1.1.css">
-		<style type="text/css">
-			.b{
-				margin-top:50px;
-			    margin-left: 450px;
-			    font-family: "楷体";
-			    color: #000000;
-			    font-size: 38px;
-			}
-			.c{
-				margin-top:10px;
-			    margin-left: 478px;
-			    color: #000000;
-			    font-size: 22px;
-			    font-family: "微软雅黑";
-			    
-			}
-			.d{
-				margin-top:30px;
-			    margin-left: 560px;
-			    color: #000000;
-			    font-family: "微软雅黑";
-			    
-			}
-		</style>
-	</head>
-	<body>
-		<div style="width: 100%; overflow: hidden; margin-left: 27px;;">
-			<img src="../img/61.jpg" width="95%" onMouseOver="this.src='../img/77.jpg'" onMouseOut="this.src='../img/61.jpg'" />
-		</div>
-				<div>
-			<p class="b">全新SEXY系列上新</p>
-		</div>
-		<div>
-		    <p class="c">#1 VERY SEXY PUSH-UP</p>
-		</div>
-		<div>
-		    <p class="d"><a href="https://victoriassecretcn.tmall.com/category-1329667459.htm?spm=a1z10.4-b-s.w5003-17023870558.3.7c59bffc2WT8ir&search=y&parentCatId=1329404854&parentCatName=%CE%AC%C3%DC%CF%B5%C1%D0&catName=%C8%AB%D0%C2Very+Sexy%CF%B5%C1%D0%CE%C4%D0%D8&scene=taobao_shop#bd">立即购买 ></a></p>
-		</div>
-	</body>
-	<script src="../js/common.js"></script>
+
+<head>
+	<meta charset="UTF-8">
+	<title>sexy</title>
+	<link rel="stylesheet" href="../css/mobi.3.1.1.css">
+	<style type="text/css">
+		.b {
+			margin-top: 50px;
+			margin-left: 450px;
+			font-family: "楷体";
+			color: #000000;
+			font-size: 38px;
+		}
+
+		.c {
+			margin-top: 10px;
+			margin-left: 478px;
+			color: #000000;
+			font-size: 22px;
+			font-family: "微软雅黑";
+
+		}
+
+		.d {
+			margin-top: 30px;
+			margin-left: 560px;
+			color: #000000;
+			font-family: "微软雅黑";
+
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width: 100%; overflow: hidden; margin-left: 27px;;">
+		<img src="../img/61.jpg" width="95%" onMouseOver="this.src='../img/77.jpg'" onMouseOut="this.src='../img/61.jpg'" />
+	</div>
+	<div>
+		<p class="b">全新SEXY系列上新</p>
+	</div>
+	<div>
+		<p class="c">#1 VERY SEXY PUSH-UP</p>
+	</div>
+	<div>
+		<p class="d">
+			<a id="buy">立即购买 ></a>
+		</p>
+	</div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+	let buy = document.getElementById('buy');
+	buy.addEventListener('click', function () {
+		window.parent.postMessage({url:"https://victoriassecretcn.tmall.com/category-1329667459.htm?spm=a1z10.4-b-s.w5003-17023870558.3.7c59bffc2WT8ir&search=y&parentCatId=1329404854&parentCatName=%CE%AC%C3%DC%CF%B5%C1%D0&catName=%C8%AB%D0%C2Very+Sexy%CF%B5%C1%D0%CE%C4%D0%D8&scene=taobao_shop#bd"}, '*');
+	})
+</script>
+
 </html>

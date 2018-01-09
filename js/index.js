@@ -8,7 +8,7 @@ const map = { template: '<iframe src="./component/map.html"></iframe>' }
 const mingdan = { template: '<iframe src="./component/weimimingdan.html"></iframe>' }
 
 const routes = [
-  { path: '/', component: chen },
+  { path: '/', component: underwear },
   { path: '/chen', component: chen },
   { path: '/underwear', component: underwear },
   { path: '/meizhuang', component: meizhuang },
@@ -50,6 +50,14 @@ const app = new Vue({
 }).$mount('#app')
 
 window.addEventListener('message', function (e) {
-  let iframeCont = document.getElementsByClassName('iframeCont')[0];
-  iframeCont.style.height = (e.data + 1) + 'px';
+  if(e.data.height){
+    let iframeCont = document.getElementsByClassName('iframeCont')[0];
+    iframeCont.style.height = (e.data.height + 1) + 'px';
+  }
+  if(e.data.url){
+    window.location.href=e.data.url;
+  }
+  if(e.data==='getEmail'){
+    window.frames[0].postMessage(document.getElementById('email').value,'*');
+  }
 }, false);

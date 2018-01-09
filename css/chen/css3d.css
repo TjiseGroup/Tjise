@@ -1,0 +1,180 @@
+.cude {   
+
+  width:300px;   
+
+  height:300px;   
+
+  position: relative;   
+
+  margin: 100px auto;   
+
+  transform-style: preserve-3d;   
+
+  -webkit-transform-style: preserve-3d;   
+
+  transform: rotateX(-30deg) rotateY(-80deg);   
+
+  -webkit-animation: rotate 20s infinite;   
+
+  animation-timing-function: linear;   
+
+  transform-origin: 50% 50% 0;   
+
+  -webkit-transform-origin: 50% 50% 0;   
+
+}       
+
+.surface {   
+
+  position: absolute;   
+
+  top: 0;   
+
+  left: 0;   
+
+  width: 300px;   
+
+  height: 300px;   
+
+  background:#666;   
+
+  opacity: 0.8;   
+
+  font-size:100px;   
+
+  text-align: center;   
+
+  line-height:300px;   
+
+  font-weight: bold;   
+
+  color:#fff;   
+
+  border:1px solid #fff;   
+
+}       
+
+.surface img {   
+
+  width: 100%;   
+
+}       
+
+.front {   
+
+  transform: rotateY(0) translateZ(150px);   
+
+}       
+
+.back {   
+
+  transform: translateZ(-150px) rotateY(180deg);   
+
+}       
+
+.left {   
+
+  transform: rotateY(-90deg) translateZ(150px);   
+
+}       
+
+.right {   
+
+  transform: rotateY(90deg) translateZ(150px);   
+
+}       
+
+.top {   
+
+  transform: rotateX(90deg) translateZ(150px);   
+
+}       
+
+.bottom {   
+
+  transform: rotateX(90deg) translateZ(-150px);   
+
+}       
+
+@-webkit-keyframes rotate {   
+
+  from {   
+
+    transform: rotateX(0deg) rotateY(0deg);   
+
+  }   
+
+  to {   
+
+    transform: rotateX(360deg) rotateY(360deg);   
+
+  }   
+
+}       
+
+.surface-in{   
+
+  width:150px;   
+
+  height:150px;   
+
+  position:absolute;   
+
+  top:50%;   
+
+  left:50%;   
+
+  margin-top:-75px;   
+
+  margin-left:-75px;   
+
+}   
+
+.surface-in img{   
+
+  width:150px;   
+
+  height:150px;   
+
+}   
+
+.front-in{   
+
+  transform:rotateY(0deg) translateZ(75px);   
+
+}   
+
+.back-in{   
+
+  transform:rotateY(180deg) translateZ(75px);   
+
+}   
+
+.left-in{   
+
+  transform:rotateY(-90deg) translateZ(75px);   
+
+}   
+
+.right-in{   
+
+  transform:rotateY(90deg) translateZ(75px);   
+
+}   
+
+.top-in{   
+
+  transform:rotateX(90deg) translateZ(-75px);   
+
+}   
+
+.bottom-in{   
+
+  transform:rotateX(-90deg) translateZ(-75px);   
+
+}
+.cude img
+{
+	width: 300px;
+	height: 300px;
+}
