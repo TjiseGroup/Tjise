@@ -32,7 +32,7 @@ const app = new Vue({
   },
   computed: {
     ifIndex: function () {
-      return (this.$route.path === '/chen' || this.$route.path === '/') ? false : true;
+      return (this.$route.path === '/chen') ? false : true;
     }
   },
   methods: {

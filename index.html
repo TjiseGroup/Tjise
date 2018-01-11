@@ -18,7 +18,7 @@
             <section class="nav container-wider">
                 <img class="logo" src="./img/logo.png" alt="logo" />
                 <div>
-                    <router-link to="/underwear" @click.native="go()" :class="$route.path === '/underwear'?'pink':''">内衣</router-link>
+                    <router-link to="/underwear" @click.native="go()" :class="($route.path === '/underwear'||$route.path === '/')?'pink':''">内衣</router-link>
                     <router-link to="/meizhuang" @click.native="go()" :class="$route.path === '/meizhuang'?'pink':''">美妆</router-link>
                     <router-link to="/sport" @click.native="go()" :class="$route.path === '/sport'?'pink':''">运动</router-link>
                     <router-link to="/pink" @click.native="go()" :class="$route.path === '/pink'?'pink':''">维密PINK</router-link>
